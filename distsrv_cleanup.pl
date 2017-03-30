@@ -77,7 +77,7 @@ sub main {
                 goto end if $Audit eq "yes";
 
                 # Remove install_list section 
-                my $RC_SK = $distsrv->setKey("install_list","","");
+                my $RC_SK = $distsrv->setKey("install_list");
                 if($RC_SK == NIME_OK) {
                     $Logger->log(3,"Install_list remove (next : Restart probe )");
                     $distsrv->restart(); 
